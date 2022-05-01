@@ -1,0 +1,108 @@
+:root {
+  --mainColor: #15202b;
+  --secondaryColor: #192734;
+
+  --borderColor: #164d56;
+
+  --mainText: #fff;
+  --secondaryText: #eeeeee;
+
+  --themeDotBorder: #fff;
+
+  --previewBg: rgb(25, 39, 52, 0.8);
+  --previewShadow: #111921;
+
+  --buttonColor: #17a2b8;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--mainColor);
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3 {
+  color: var(--mainText);
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+}
+
+p,
+li {
+  color: var(--secondaryText);
+  font-family: "Roboto Mono", monospace;
+}
+
+.center {
+  text-align: center;
+}
+
+.first {
+  display: grid;
+  grid-template-columns: 1fr 0fr 1fr;
+}
+
+.list {
+  list-style-position: inside;
+}
+.vl {
+  border-right: 2px solid white;
+}
+.skills {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ele {
+  display: flex;
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 18px;
+}
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+li::marker {
+  color: red;
+}
+
+.pad {
+  padding: 20px;
+}
+a:link,
+a:visited {
+  background-color: #1cd4ec;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: red;
+  padding: 20px 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .first {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .first-child {
+    border-bottom: 1px solid white;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .list {
+    list-style-position: outside;
+  }
+}
